@@ -1,0 +1,20 @@
+* Chessgrid.el
+
+Train your brain to recognize chess positions.
+
+** Overview
+
+Chessgrid.el is a simple emacs game, where you are presented with a
+chess board and you need to guess the maximum number of cell positions
+in a row.
+
+It's mostly a toy project.
+
+** todo list
+*** TODO handle point of view (black/white) orientation
+*** TODO handle when C-g break the loop
+*** TODO function from coord to POS string and message it on fail
+*** TODO clean code
+*** TODO persist best score
+*** TODO add timer
+
