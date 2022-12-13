@@ -146,7 +146,7 @@ on chessgrid--pov"
 (defun chessgrid-challenge ()
   "Start the game loop.
 
-The loop is terminated when the coutdown is over of by C-g.
+The loop is terminated when the coutdown is over or by C-g.
 
 At the end of the loop, it reset the chessgrid--cell and re-draw
 the buffer"
