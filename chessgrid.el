@@ -157,11 +157,12 @@ the buffer"
   (unwind-protect
 	  (let ((start-time (truncate (float-time (current-time)))))
 		(while t 
-		  (when (> (- (truncate (float-time (current-time))) start-time) chessgrid--countdown-value)
-			(user-error  "Time is over"))
+		  
 		  (setq chessgrid--cell (chessgrid--get-random-position))
 		  (chessgrid--draw-buffer)
 		  (let ((guess (downcase (read-string "Guess the position: "))))
+			(when (> (- (truncate (float-time (current-time))) start-time) chessgrid--countdown-value)
+			  (user-error  "Time is over"))
 			(if (equal chessgrid--cell (chessgrid--get-coordinate-from-pos guess))
 				(setq chessgrid--success (+ 1 chessgrid--success))
 			  (setq chessgrid--error (+ 1 chessgrid--error))))))
