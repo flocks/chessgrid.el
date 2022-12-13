@@ -10,6 +10,8 @@ the time limit to improve your skills.
 
 It's mostly a toy project.
 
+[[https://github.com/flocks/chessgrid.el/raw/master/chessgrid.gif]]
+
 ** todo list
 *** TODO persist best score
 
