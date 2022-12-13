@@ -1,12 +1,12 @@
 * Chessgrid.el
 
-Train your brain to recognize chess positions.
+Improve your chess abilities with a simple and effective game of
+positional recognition, all within emacs.
 
 ** Overview
 
-Chessgrid.el is a simple emacs game, where you are presented with a
-chess board and you need to guess the maximum number of cell positions
-in a row.
+Identify as many highlighted chess positions as possible within
+the time limit to improve your skills.
 
 It's mostly a toy project.
 
