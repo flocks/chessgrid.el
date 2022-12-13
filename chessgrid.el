@@ -67,9 +67,12 @@
 
 
 (defun chessgrid--get-random-position ()
+  "Generate a random chess coordinates of shape (x . y)"
   (cons (random 8) (random 8)))
 
 (defun chessgrid--insert-heading ()
+  "Insert the header of the buffer. It contains the title and the
+description of the mode"
   (goto-char (point-min))
   (insert (propertize "Chessgrid.el" 'face 'chessgrid-title))
   (newline 2)
@@ -87,15 +90,18 @@ the time limit to improve your skills." 'face
   (newline 3))
 
 (defun chessgrid--display-score ()
+  "Display the score"
   (insert
    (format "❌ %s ✅ %s"
 		   (number-to-string chessgrid--error)
 		   (number-to-string chessgrid--success))))
 
 (defun chessgrid--display-pov ()
+  "Insert the point-of-view data"
   (insert (format "POV: %s" (if (eq chessgrid--pov 'white) "⬜" "⬛"))))
 
 (defun chessgrid--draw-buffer ()
+  "Draw the chessgrid buffer"
   (chessgrid--ensure-buffer)
   (let ((inhibit-read-only t))
 	(erase-buffer)
@@ -109,6 +115,8 @@ the time limit to improve your skills." 'face
 	(goto-char (point-min))))
 
 (defun chessgrid-toggle-pov ()
+  "Toggle `chessgrid--pov' variable, which is either 'white or
+'black"
   (interactive)
   (setq chessgrid--pov
 		(if (eq chessgrid--pov 'white)
@@ -136,6 +144,12 @@ on chessgrid--pov"
 	(user-error (format "Not in %s buffer" chessgrid--buffer-name))))
 
 (defun chessgrid-challenge ()
+  "Start the game loop.
+
+The loop is terminated when the coutdown is over of by C-g.
+
+At the end of the loop, it reset the chessgrid--cell and re-draw
+the buffer"
   (interactive)
   (chessgrid--ensure-buffer)
   (setq chessgrid--success 0)
@@ -156,6 +170,7 @@ on chessgrid--pov"
 	(chessgrid--draw-buffer)))
 
 (defun chessgrid ()
+  "Point of entry of the mode. Create the buffer if needed."
   (interactive)
   (pop-to-buffer chessgrid--buffer-name)
   (chessgrid-mode)
