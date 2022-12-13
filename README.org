@@ -1,7 +1,7 @@
 * Chessgrid.el
 
 Improve your chess abilities with a simple and effective game of
-positional recognition, all within emacs.
+positional recognition, all within Emacs.
 
 ** Overview
 

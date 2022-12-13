@@ -77,7 +77,7 @@ description of the mode"
   (insert (propertize "Chessgrid.el" 'face 'chessgrid-title))
   (newline 2)
   (insert (propertize "Improve your chess abilities with a simple and effective game of
-positional recognition, all within emacs." 'face
+positional recognition, all within Emacs." 'face
 'font-lock-comment-face))
   (newline 2)
   (insert (propertize "Identify as many highlighted chess positions as possible within
