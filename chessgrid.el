@@ -73,9 +73,13 @@
   (goto-char (point-min))
   (insert (propertize "Chessgrid.el" 'face 'chessgrid-title))
   (newline 2)
-  (insert (propertize "Train your brain to recognize chess positions." 'face 'font-lock-comment-face))
-  (newline)
-  (insert (propertize "Try to identify the most number of chess positions in a row" 'face 'font-lock-comment-face))
+  (insert (propertize "Improve your chess abilities with a simple and effective game of
+positional recognition, all within emacs." 'face
+'font-lock-comment-face))
+  (newline 2)
+  (insert (propertize "Identify as many highlighted chess positions as possible within
+the time limit to improve your skills." 'face
+'font-lock-comment-face))
   (newline 2)
   (insert (propertize "C-c C-c - start the game" 'face 'font-lock-comment-face))
   (newline)
