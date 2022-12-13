@@ -163,8 +163,7 @@ the buffer"
 		  (chessgrid--draw-buffer)
 		  (let ((guess (downcase (read-string "Guess the position: "))))
 			(if (equal chessgrid--cell (chessgrid--get-coordinate-from-pos guess))
-				(setq chessgrid--success (+ 1 chessgrid--success))))
-		  (chessgrid--draw-buffer)))
+				(setq chessgrid--success (+ 1 chessgrid--success))))))
 
 	(setq chessgrid--cell nil)
 	(chessgrid--draw-buffer)))
