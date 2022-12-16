@@ -157,7 +157,6 @@ the buffer"
   (unwind-protect
 	  (let ((start-time (truncate (float-time (current-time)))))
 		(while t 
-		  
 		  (setq chessgrid--cell (chessgrid--get-random-position))
 		  (chessgrid--draw-buffer)
 		  (let ((guess (downcase (read-string "Guess the position: "))))
