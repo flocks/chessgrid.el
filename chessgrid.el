@@ -4,7 +4,8 @@
 
 (defcustom chessgrid--buffer-name "*chessgrid*"
   "Name of chessgrid buffer"
-  :group 'chessgrid)
+  :group 'chessgrid
+  :type 'string)
 
 (defgroup chessgrid-faces nil
   "Chesssgrid faces customization group."
@@ -51,9 +52,9 @@
 								  (eq (cdr cell) i)))
 			 (mod (mod j 2))
 			 (is-white (eq mod (mod i 2))))
-		(let ((square (cond (is-highlighted (format "🟥" j i))
-							(is-white (format "⬜" j i)) 
-							(t (format "⬛" j i)))))
+		(let ((square (cond (is-highlighted "🟥")
+							(is-white "⬜") 
+							(t "⬛"))))
 		  (insert (propertize square 'face 'chessgrid-board)))))
 	(newline)))
 
