@@ -116,8 +116,7 @@ the time limit to improve your skills." 'face
 	(goto-char (point-min))))
 
 (defun chessgrid-toggle-pov ()
-  "Toggle `chessgrid--pov' variable, which is either 'white or
-'black"
+  "Toggle `chessgrid--pov' variable, which is either \='white or \='black"
   (interactive)
   (setq chessgrid--pov
 		(if (eq chessgrid--pov 'white)
